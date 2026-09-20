@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "VoiceSep Engine V1",
+  "version": "1.0",
+  "description": "On-device WebGPU real-time vocal separation.",
+  "permissions": ["tabCapture", "offscreen", "storage", "activeTab"],
+  "host_permissions": ["<all_urls>", "http://127.0.0.1:3030/*"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}
