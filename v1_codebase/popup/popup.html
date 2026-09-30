@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { width: 300px; padding: 15px; font-family: sans-serif; background: #1e1e1e; color: #fff; }
+        .slider-container { margin-bottom: 20px; }
+        input[type="range"] { width: 100%; }
+        button { background: #444; color: #fff; border: none; padding: 5px 10px; cursor: pointer; border-radius: 4px; }
+        button:hover { background: #666; }
+        button.start-btn { background: #0078d4; width: 100%; padding: 10px; font-weight: bold; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h3>🎙️ VoiceSep Engine</h3>
+    <button id="startBtn" class="start-btn">Start Capture</button>
+    <p id="status" role="status">Not capturing</p>
+    <pre id="log" aria-live="polite">No engine events yet.</pre>
+    
+    <div class="slider-container">
+        <label>🎵 Instruments / Background</label>
+        <input type="range" id="bgVol" min="0" max="1.5" step="0.05" value="0.8" disabled>
+        <button id="muteBg">MUTE</button>
+    </div>
+    
+    <div class="slider-container">
+        <label>🗣️ Vocals</label>
+        <input type="range" id="vocVol" min="0" max="1.5" step="0.05" value="0.8" disabled>
+        <button id="muteVoc">MUTE</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
